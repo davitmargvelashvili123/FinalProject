@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <style>
+        img {
+    float: left;
+    width:  400px;
+    height: 400px;
+    object-fit: cover;
+}
+   </style>
+   <div class="container-fluid mt-5 bg-body-tertiary">
+     <div class="container">
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gy-3">
+       <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/pegasus.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+         პეგასი—ფრთოსანი ცხენი ძველბერძნულ მითოლოგიაში. მედუზა გორგონას სისხლიგან წარმოიშვა.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/pegasus">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/medusa.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+          მედუზა—გორგონა, რომელსაც თავზე გველები ეხვევა, მოკლა პერსევსმა. მისი სახის მნახველ ქვავდება.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/medusa">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+             <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/hydra.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+           ჰიდრა—საზარელი ურჩხული, ლერნეს ჭაობის ბინადარი, ტიფონისა და ექიდნეს ნაშიერი; ჰერას გამოზრდილი.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/hydra">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+{% endblock %}

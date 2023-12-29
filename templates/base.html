@@ -1,0 +1,115 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #333;
+      color: #fff; /* White or Light Text for Contrast */
+    }
+
+    .navbar {
+      background-color: #800000;
+      color: #444;
+    }
+
+    .navbar-nav .nav-link {
+      color: #444 !important;
+    }
+
+    h1, h5 {
+      color: #069AF3;
+    }
+
+    h3, .card-title, .list-group-item a {
+      color: #000000;
+    }
+
+    p {
+        color: #ffd700
+    }
+
+    .card {
+      background-color: #f8f9fa; /* Light Gray Background */
+    }
+
+    /* Updated styles for the sign-in, register buttons, search bar, and comments section */
+    .navbar-btns {
+      display: flex;
+      align-items: center;
+      margin-left: auto; /* Push buttons to the right */
+    }
+
+    .btn-signin,
+    .btn-register {
+      margin-left: 10px;
+      color: #333; /* Dark Text */
+      border-color: #333; /* Dark Outline */
+    }
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .search-input {
+      margin-right: 5px;
+    }
+
+    .comments-section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #555; /* Dark Gray Background for Comments Section */
+      border-radius: 8px;
+    }
+
+    .comment {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #666; /* Medium Gray Background for Each Comment */
+      border-radius: 8px;
+    }
+
+    .comment-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .btn-edit,
+    .btn-remove {
+      color: #fff;
+    }
+    .truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 200px;
+        }
+    a {
+    text-decoration: none;
+    }
+  </style>
+  <title>{% block title %}Greekpedia{% endblock %}</title>
+</head>
+<body>
+
+  {% include "navbar.html" %}
+
+
+  <div class="container mt-4">
+      {% block content %}
+
+      {% endblock %}
+  </div>
+
+
+</body>
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

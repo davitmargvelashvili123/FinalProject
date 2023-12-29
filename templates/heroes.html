@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <style>
+        img {
+    float: left;
+    width:  400px;
+    height: 400px;
+    object-fit: cover;
+}
+   </style>
+   <div class="container-fluid mt-5 bg-body-tertiary">
+     <div class="container">
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gy-3">
+       <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/heracles.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+           ჰერაკლე—ბერძნული მითოლოგიის მიხედვით, ღვთაებრივი გმირი. რომაელები უწოდებდნენ ჰერკულესს.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/heracles">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/perseus.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+          პერსევსი—არგოსის მეფის, აკრისიოსის ქალიშვილის და ზევსის ვაჟი. გორგონა მედუზას მკვლელი.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/perseus">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+             <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/theseus.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+            თესევსი-ანტიკური მითების ერთ-ერთი ცენტრალური გმირი და უმთავრესი პერსონაჟია.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/theseus">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+{% endblock %}

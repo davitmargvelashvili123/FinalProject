@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Adding Answer
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid bg-white mt-5 border-top border-bottom shadow">
+        <div class="container">
+
+            {% if form.errors %}
+                {% for field, errors in form.errors.items() %}
+                    {% for error in errors %}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+
+            <form method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                {{ form.whoanswer(class="form-control mt-4", placeholder=form.whoanswer.label.text) }}
+                {{ form.answer(class="form-control mt-4", placeholder=form.answer.label.text) }}
+
+                {{ form.submit(class="btn btn-warning my-4") }}
+            </form>
+        </div>
+    </div>
+{% endblock %}

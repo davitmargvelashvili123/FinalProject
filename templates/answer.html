@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ answer.name }}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid bg-white mt-5 border-top border-bottom shadow">
+        <div class="container">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th scope="row">ავტორი</th>
+                    <td> {{ answer.name }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">კითხვა</th>
+                    <td>{{ answer.whoanswer }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">პასუხი</th>
+                    <td>{{ answer.answer }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

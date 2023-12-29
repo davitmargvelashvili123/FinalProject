@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <style>
+        img {
+    float: left;
+    width:  400px;
+    height: 400px;
+    object-fit: cover;
+}
+   </style>
+   <div class="container-fluid mt-5 bg-body-tertiary">
+     <div class="container">
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 gy-3">
+       <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/zeus.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+           ზევსი—ძველბერძნულ მითოლოგიაში ცის, ელვისა და ქუხილის ღმერთი, რომელიც მთელ მსოფლიოს განაგებდა.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/zeus">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/poseidon.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+          პოსეიდონი—ზღვის ღმერთი, კრონოსის და რეას ვაჟი, ზევსის, ჰადესის, ჰერას, დემეტრას და ჰესტიას ძმა.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/poseidon">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+             <div class="col">
+        <div class="card shadow-sm">
+          <img src="/static/hades.jpg" class="card-img-top image">
+         <div class="card-body>">
+          <p class="card-text">
+           ჰადესი—ქთონური ღვთაება ძველ ბერძნულ მითოლოგიაში, ქვესკნელის მბრძანებელი.
+          </p>
+          <div class="justify-content-center">
+           <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/hades">ნახვა</a></button>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+
+{% endblock %}

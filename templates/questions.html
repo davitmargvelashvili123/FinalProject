@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid bg-white mt-5 border-top border-bottom shadow">
+        <div class="container">
+            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 gy-3">
+                {% for product in products %}
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <img src="/static/{{ product.img }}"
+                                     class="card-img-top embed-responsive-item"
+                                     alt="...">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-title">კითხვის ავტორი: {{ product.name }} </p>
+                                <h3 class="card-text truncate">{{ product.question }}</h3>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="input-group">
+                                        <a href="/product/{{ product.id }}" class="btn btn-danger px-3">
+                                            ნახვა
+                                        </a>
+                                    </div>
+                                </li>
+                                {% if current_user.username == "admin" or current_user.username == product.name %}
+                                <li class="list-group-item">
+                                    <a href="/edit_product/{{ product.id }}" class="btn btn-outline-info">
+                                        რედაქტირება
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <a href="/delete_product/{{ product.id }}" class="btn btn-danger">
+                                        წაშლა
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

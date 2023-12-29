@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid bg-white mt-5 border-top border-bottom shadow">
+        <div class="container">
+            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 gy-3">
+                {% for answer in answers %}
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-title">პასუხის ავტორი: {{ answer.name }} </p>
+                                <h3 class="card-text truncate">{{ answer.whoanswer }}</h3>
+                                <h3 class="card-text truncate">{{ answer.answer }}</h3>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <div class="input-group">
+                                        <a href="/answer/{{ answer.id }}" class="btn btn-danger px-3">
+                                            ნახვა
+                                        </a>
+                                    </div>
+                                </li>
+                                {% if current_user.username == "admin" or current_user.username == answer.name %}
+                                <li class="list-group-item">
+                                    <a href="/edit_answer/{{ answer.id }}" class="btn btn-outline-info">
+                                        რედაქტირება
+                                    </a>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <a href="/delete_answer/{{ answer.id }}" class="btn btn-danger">
+                                        წაშლა
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
